@@ -23,6 +23,6 @@ class ComposedFilter(AbstractFilter):
         filtered_data = data
 
         for filter in self._base_filters:
-            filtered_data = filter.apply_to(data)
+            filtered_data = filter.apply_to(filtered_data)
 
         return filtered_data
